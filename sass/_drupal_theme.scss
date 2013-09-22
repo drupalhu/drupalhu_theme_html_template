@@ -6,7 +6,6 @@
 @import "base";
 
 body {
-  background-color: $blue-body;
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
@@ -15,6 +14,7 @@ body {
 .animate {
  	@include transition(all 0.4s);
 }
+
 #main-nav {
   background-color: $blue-100;
   background-image: url("../images/main-nav-right-shadow.png");
@@ -115,6 +115,34 @@ body {
     &.icon-rss {
       background-position: 0 -72px;
       width: 18px;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Navigation-column's changes on compact view.
+
+@media all and (max-width: $screen-compact-max) {
+  #main-nav {
+    .logo {
+      display: none;
+    }
+    .search-block {
+      padding-left: $basemargin / 2;
+    }
+  }
+  #social {
+    @include box-shadow(0px 1px 0px $white-10);
+    
+    padding: 9px $basemargin 7px $basemargin / 2;
+    border-bottom: 1px solid $black-25;
+
+    .social-media {
+      text-align: left;
+
+      a.icon-facebook {
+        margin-left: 4px;
+      }
     }
   }
 }
