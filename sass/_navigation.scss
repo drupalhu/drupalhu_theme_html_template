@@ -7,20 +7,21 @@
 
 #main-nav {
   .nav-links {
+    border-top: 1px solid $black-25;
     margin: 73px 0 0 0;
     padding: 0;
-    border-top: 1px solid $black-25;
+    width: 220px;
         
     li {
-      padding: 7px $basemargin;
       @include box-shadow(0px 1px 0px $white-10);
       border-bottom: 1px solid $black-25;
+      padding: 7px $basemargin;
       
       &:first-child {
         border-top: 1px solid $white-10;
       }
       a {
-        padding:0 0 0 28px;
+        padding:0 0 0 30px;
         color: $white;
         text-decoration: none;
         background-image: url("../images/icon-sprite.svg");
@@ -53,5 +54,32 @@
     padding: 5px;
     @include box-shadow(0px 2px 0px $white-10);
   }
-}  
+}
+
+// -----------------------------------------------------------------------------
+// On compact view.
+@media all and (max-width: $screen-compact-max) {
+  #main-nav {
+    .nav-links {
+      li {
+        padding: 7px $basemargin 7px $basemargin / 2;
+      }
+    }
+  }
+}
+
+
+// #############################################################################
+// DEV: menu-toggle button.
+
+.menu-toggle {
+  background: gold;
+  cursor: pointer;
+  height: 30px;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  width: 30px;
+  z-index: 1000;
+}
 
