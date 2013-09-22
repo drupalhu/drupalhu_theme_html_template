@@ -44,6 +44,24 @@ body {
       color: $white;
       font-weight: 100;
       font-style: italic;
+      font-size: 13px;
+
+      &::-webkit-input-placeholder { /* WebKit browsers */
+        color: #fff;
+        opacity: 1;
+      }
+      &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #fff;
+        opacity: 1;
+      }
+      &::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #fff;
+        opacity: 1;
+      }
+      &:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: #fff;
+        opacity: 1;
+      }
     }
     .form-submit {
       @include texthidden;
@@ -70,7 +88,8 @@ body {
   	text-align: center;
   	width: 100%;
   	margin: 0;
-  	padding: 0;
+  	padding: 11px 0 0 0;
+  	background: url("../images/social_bg.png") repeat-x scroll 0 0 transparent;
   	
     li {
       display: inline-block;
@@ -90,7 +109,7 @@ body {
       width: 10px
     }
     &.icon-twitter {
-      background-position: 0 -36px;
+      background-position: 0 -34px;
       width: 18px;
     }
     &.icon-rss {
@@ -139,11 +158,35 @@ section {
   .pane-title {
     font-size: 42px;
     color: $white;
-    margin: 80px 0 40px 20px;
+    margin: 74px 0 35px 16px;
     font-weight: 400;
+    line-height: 100%;
     font-family: $notosans;
   }
 }
+
+// date style
+.time {
+  line-height: 100%;
+  color: $white;
+  padding-top: 11px;
+  
+  span {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    
+    &.day {
+      font-size: 22px;
+      margin-bottom: 3px;
+    }
+    &.month {
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+  }
+}
+
 
 .node-tile {
   width: 300px;
@@ -185,29 +228,10 @@ section {
       padding-right: 20px;
       color: $tile-link;
       line-height: 120%;
+      font-style: normal;
       
       &:hover {
         text-decoration: none;
-      }
-    }
-  }
-  .time {
-    line-height: 100%;
-    color: $white;
-    padding-top: 11px;
-    
-    span {
-      display: block;
-      text-align: center;
-      font-weight: 700;
-      
-      &.day {
-        font-size: 22px;
-        margin-bottom: 3px;
-      }
-      &.month {
-        font-size: 11px;
-        text-transform: uppercase;
       }
     }
   }
@@ -396,14 +420,14 @@ article.more {
   .text {
     padding: 0 15px 0 9px;
     margin-top: 60px;
-    line-height: 120%;
+    line-height: 110%;
     background-image: url("../images/icon-sprite.svg");
     background-repeat: no-repeat;
     background-position: 75px -991px;
 
     a {
       color: $white;
-      line-height: 120%;
+      font-style: normal;
       
       &:hover {
         text-decoration: none;
@@ -412,6 +436,142 @@ article.more {
   }
 }
 
+/**
+ * breadcrumb
+ */
+.breadcrumb {
+  background-color: transparent;
+  margin: 0;
+  color: $white;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 15px 0 34px;
+  
+  a {
+    color: $blue-body-50;
+  }
+  & > li + li:before {
+    color: $white;
+    padding: 0;
+  }
+}
+
+#page-title {
+  font-size: 42px;
+  color: $white;
+  margin: 0 0 33px 18px;
+  font-weight: 400;
+  font-family: $notosans;
+  max-width: 588px;
+}
+.page-header {
+  border-bottom: 0;
+  margin: 0;
+  padding-bottom: 0;
+}
+.node-right {
+  width: 555px;
+  background-color: $white;
+  padding: 16px 30px 30px 30px;
+}
+
+.field {
+  .field-label {
+    font-weight: 700;
+  }
+}
+/**
+ * Node event page
+ */
+.node {
+  color: $text-color;
+  
+  .infos {
+    i {
+      background-image: url("../images/icon-sprite.svg");
+      background-repeat: no-repeat;
+    }
+    .date {
+      background-color: $node-dark-blue;
+    }
+    .comment-count {
+      background-color: $node-blue;
+      padding-top: 13px;
+      
+      i {
+        top: 0;
+        background-position: 13px -1101px;
+      }    
+      .count {
+        text-align: center;
+        display:block;
+        z-index: 5;
+        position: relative;
+        font-size: 11px;
+        font-weight: 700;
+        color: $node-blue;
+      }
+    }
+    .favourites {
+      background-color: $node-light-blue;
+      
+      i {
+        background-position: 12px -1163px;        
+      }
+    }
+    .share {
+      background-color: $node-lighter-blue;
+
+      i {
+        background-position: 13px -1223px;        
+      }
+    }
+  }
+  .field {
+    margin-bottom: 10px;
+  }
+  &.node-esemeny {
+    .date {
+      background-color: $node-event-dark-orange;
+    }
+    .comment-count {
+      background-color: $node-event-orange;
+      
+      .count {
+        color: $node-event-dark-orange;
+      }
+    }
+    .favourites {
+      background-color: $node-event-light-orange;
+    }
+    .share {
+      background-color: $node-event-lighter-orange;
+    }
+  }
+  &.node-forum {
+    .date {
+      background-color: $node-forum-dark-orange;
+    }
+    .comment-count {
+      background-color: $node-forum-orange;
+      
+      .count {
+        color: $node-forum-dark-orange;
+      }
+    }
+    .favourites {
+      background-color: $node-forum-light-orange;
+    }
+    .share {
+      background-color: $node-forum-lighter-orange;
+    }
+  }
+}
+article.node a {
+  font-style: italic;
+  color: $text-link;
+}
 /**
  * flexslider
  */
@@ -426,10 +586,10 @@ article.more {
     bottom: 0;
     color: $white;
     font-size: 26px;
-    max-width: 40%;
+    max-width: 45%;
     bottom: 20px;
     left: 20px;
-    line-height: 120%;
+    line-height: 115%;
     font-weight: 400;
   }
 }
@@ -474,19 +634,45 @@ footer {
   color: $blue-body-50;
   font-style: italic;
   font-weight: 400;
-  padding: 80px 0 80px 20px;
+  padding: 69px 0 69px 20px;
   
   a {
     color: $white;
   }
+  p {
+    margin: 0;
+  }
 }
+
+/**
+ * comment
+ */
+#comments {
+  width: 606px;
+  margin-top: 5px;
+  
+  section {
+    margin-left: 0;
+  }
+  .field-name-comment-body {
+    background-color: $white;
+    padding: 16px 30px 16px 30px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    min-height: 100px;
+  }
+}
+.indented {
+  margin-left: 50px;
+}
+
 // big screen
 @media all and (min-width: 1340px) {
   
   nav {
     .logo {
       img {
-        width:190px; 
+        width:180px; 
       }
     }
     .nav-links li {
@@ -519,7 +705,7 @@ footer {
 // normal screen
 @media all and (min-width: 1000px) and (max-width: 1339px) {
   section {
-    width: 910px;
+    width: 917px;
   }
 
 }
