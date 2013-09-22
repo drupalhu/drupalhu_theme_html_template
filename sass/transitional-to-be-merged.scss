@@ -39,25 +39,17 @@
 
 html,
 body {
-  @include transition-property(background-position);
-  @include transition-duration(350ms);
-  @include transition-timing-function(linear);
-
-  background: url("../images/main-nav-right-shadow.png") scroll repeat-y 210px top $blue-100;
-  // border: 2px solid green; // DEBUG.
   height: 100%;
 }
-
-#page-full {
-
+body {
+  background: $blue-100;
 }
+
 #main {
-  @include transition-property(margin);
-  @include transition-duration(350ms);
-  @include transition-timing-function(linear);
+  @include box-shadow;          // Args are set as default in _base.scss.
 
   background-color: $blue-body;
-  // border: 2px solid red; // DEBUG.
+  // border: 2px solid red;     // DEBUG.
   clear: both;
   margin-left: 220px;
   min-height: 100%;
@@ -76,39 +68,14 @@ body {
   width: 220px;
 }
 
-/*
-#content {
-  position: relative;
-  left: 0;
-  top: 0;
-}
-#main-content {
-  @include transition-property(margin);
-  @include transition-duration(500ms);
-
-  margin-left: 220px;
-}
-*/
 
 // -----------------------------------------------------------------------------
 // Main layout's changes on compact view.
 
 @media all and (max-width: $screen-compact-max) {
-  body {
-    background-position: 30px top;
-  }
-  #main {
-    margin-left: 40px;
-  }
 
-  // Opening the menu when on compact view.
-  body.menu-open {
-    & {
-      background-position: 210px top;
-    }
-    #main {
-      margin-left: 220px;
-    }
+  #main {
+    margin-left: 40px; 
   }
 }
 
@@ -172,12 +139,6 @@ body {
 // Navigation-column's definitions.
 
 #main-nav {
-  /*
-  background-color: $blue-100;
-  background-image: url("../images/main-nav-right-shadow.png");
-  background-repeat: repeat-y;
-  background-position: center right;
-  */
 
   .logo {
     margin: $basemargin $basemargin 0 $basemargin;
@@ -269,8 +230,9 @@ body {
     }
   }
   #social {
-    padding: 9px $basemargin 7px $basemargin / 2;
     @include box-shadow(0px 1px 0px $white-10);
+    
+    padding: 9px $basemargin 7px $basemargin / 2;
     border-bottom: 1px solid $black-25;
 
     .social-media {
@@ -285,7 +247,7 @@ body {
 
 
 // #############################################################################
-// Content column's definitions.
+// Main content column's definitions.
 
 .tile {
   width: 50px;
