@@ -5,30 +5,73 @@
 
 @import "base";
 
+
+// #############################################################################
+// Main layout's definitions.
+
+html,
+body {
+  height: 100%;
+}
+body {
+  background: $blue-100;
+}
+
+#main {
+  @include box-shadow;          // Args are set as default in _base.scss.
+
+  background-color: $blue-body;
+  // border: 2px solid red;     // DEBUG.
+  clear: both;
+  margin-left: 220px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  position: relative;
+  z-index: 20;
+}
+
 #main-nav {
   height: 100%;
   overflow: hidden;
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 10;
   width: 220px;
 }
 
-#content {
-  position: relative;
-  left: 0;
-  top: 0;
-  
-  #main-content {
-    margin-left: 220px;
+
+// -----------------------------------------------------------------------------
+// Main layout's changes on compact view.
+
+@media all and (max-width: $screen-compact-max) {
+
+  #main {
+    margin-left: 40px; 
   }
 }
 
-.social-media {
+
+// #############################################################################
+// Misc.
+
+#social .social-media {
   bottom: 20px;
   font-size: 1.8em;
   line-height: 2em;
   position: absolute;
   width: 100%;
   min-width: 100px;
+}
+
+
+// -----------------------------------------------------------------------------
+// Misc's changes on compact view.
+
+@media all and (max-width: $screen-compact-max) {
+  #social .social-media {
+    line-height: 1em;
+    font-size: 1em;
+    position: static;
+  }
 }
