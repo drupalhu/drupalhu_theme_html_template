@@ -81,6 +81,7 @@ $node-forum-lighter-orange: #da7f4e;
 $white-10: #0A709F;
 $black-25: #004870;
 
+$color-shadows: rgba(0, 0, 0, 0.4);
 
 // -----------------------------------------------------------------------------
 // Breakpoints.
@@ -104,8 +105,13 @@ $basemargin: 20px;
 // -----------------------------------------------------------------------------
 // CSS3 defaults.
 
-// TODO: defining them.
+$default-box-shadow-color: $color-shadows;
+$default-box-shadow-h-offset: 0px;
+$default-box-shadow-v-offset: 0px;
+$default-box-shadow-blur: 0.6em;
+// $default-box-shadow-spread: -0.4em;
 
+// TODO: define.
 /*
 $default-border-radius: 4px;
 */
