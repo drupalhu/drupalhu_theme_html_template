@@ -1,4 +1,3 @@
-*.css
 .sass-cache
 !lib/bootstrap/css/*.css
 !css/flexslider.css
