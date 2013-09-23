@@ -2,6 +2,7 @@ drupalhu_theme_html_template
 ============================
 
 HTML alap a Drupal.hu sminkhez
+Megtekinthető: http://drupalhu.github.io/drupalhu_theme_html_template/
 
 ## Grafika
 https://dl.dropboxusercontent.com/u/743951/drupalhu/forrasanyagok/Drupal.hu_web_09.ai
