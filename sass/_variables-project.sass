@@ -1,0 +1,117 @@
+// -----------------------------------------------------------------------------
+// Typography.
+
+$base-font-size: 14px
+
+// The font size set on the root html element.
+$base-line-height: 24px
+
+// This line-height determines the basic unit of vertical rhythm.
+
+$h1-font-size: 2 * $base-font-size
+$h2-font-size: 1.5 * $base-font-size
+$h3-font-size: 1.17 * $base-font-size
+$h4-font-size: 1 * $base-font-size
+$h5-font-size: 0.83 * $base-font-size
+$h6-font-size: 0.67 * $base-font-size
+
+// First, let's create some font stacks.
+$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif
+$times: Times, "Times New Roman", Georgia, "DejaVu Serif", serif
+$georgia: Georgia, "Times New Roman", "DejaVu Serif", serif
+
+$verdana: Verdana, Tahoma, "DejaVu Sans", sans-serif
+$tahoma: Tahoma, Verdana, "DejaVu Sans", sans-serif
+$helvetica: Helvetica, Arial, "Nimbus Sans L", sans-serif
+$arial: Arial, Helvetica, "Nimbus Sans L", sans-serif
+$notosans: "Noto Sans", sans-serif
+
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+$courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif
+
+// Now create some variables for the font stacks we want to use on this site.
+$base-font-family: $notosans
+
+// The font family set on the html element.
+$font-body: $notosans
+$font-monospace: $courier
+
+// -----------------------------------------------------------------------------
+// Project palette.
+// TODO: THIS IS A MESS COLOR prefix all the color variables
+
+$white: #fff
+$blue-100: #005E98
+$blue-in-blue-50: #002637
+$dark-blue: #00324C
+$blue-body: #007DBF
+$blue-body-50: #7FBEDF
+$blue: #004873
+$blue-light: #005F99
+$tile-link: #666666
+$text-color: #666666
+$text-link: #007DBF
+$tile-bg: #EDEDED
+$navigation-hover: #004772
+
+// sections
+$forum-orange: #D15F22
+$job-blue: #004873
+$event-orange: #E8931B
+$node-add-light-green: #96BC44
+$node-add-dark-green: #699900
+
+// node info colors
+$node-dark-blue: #00243b
+$node-blue: #00324C
+$node-light-blue: #004873
+$node-lighter-blue: #005F99
+
+$node-event-dark-orange: #cc8118
+$node-event-orange: #e8931b
+$node-event-light-orange: #eda034
+$node-event-lighter-orange: #ffb347
+
+$node-forum-dark-orange: #b5521d
+$node-forum-orange: #d15f22
+$node-forum-light-orange: #d66f39
+$node-forum-lighter-orange: #da7f4e
+
+$white-10: #0A709F
+$black-25: #004870
+
+$color-shadows: rgba(0, 0, 0, 0.4)
+
+// -----------------------------------------------------------------------------
+// Breakpoints.
+// We planned 2 states: a 'full-width' one for desktop displays and a 'compact'
+// one for smaller devices.
+$screen-full-min: 865px
+$screen-compact-max: 864px
+
+// -----------------------------------------------------------------------------
+// Layout variables.
+
+// The amount lists, blockquotes and comments are indented.
+$indent-amount: 30px
+
+// The height of the navigation container.
+$nav-height: 20px
+
+// The base margin in site
+$basemargin: 20px
+
+// -----------------------------------------------------------------------------
+// CSS3 defaults.
+
+$default-box-shadow-color: $color-shadows
+$default-box-shadow-h-offset: 0px
+$default-box-shadow-v-offset: 0px
+$default-box-shadow-blur: 0.6em
+
+// $default-box-shadow-spread: -0.4em;
+
+// TODO: define.
+/*
+ *$default-border-radius: 4px;

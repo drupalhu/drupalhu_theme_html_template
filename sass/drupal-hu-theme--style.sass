@@ -1,0 +1,49 @@
+@charset 'UTF-8'
+
+
+// Currently leaving here but I think these are unecessary
+@import compass/support
+
+// Add Compass' IE and vendor prefix support variables.
+@import compass/layout
+@import compass/utilities
+
+// Better than Drupal's clearfix.
+@import compass/css3
+
+// Use one CSS3 mixin instead of multiple vendor prefixes.
+@import compass/typography/vertical_rhythm
+
+// ---------------------
+// Mixins include
+// ---------------------
+// Import our mixins early so they can be used by other partials.
+@import 'mixins/mixins'
+
+// ---------------------
+// Variables include
+// ---------------------
+@import 'variables-project'
+
+// ---------------------
+// Grid include
+// ---------------------
+@import 'grid/bootstrap'
+
+// ---------------------
+// Drupal specific 
+// style include
+// ---------------------
+@import 'grid/drupal_system'
+
+// ---------------------
+// Fonts declare
+// ---------------------
+
+
+// ---------------------
+// Styles include
+// ---------------------
+@import 'layout/drupal_theme'
+@import 'layout/layout'
+@import 'layout/navigation'
