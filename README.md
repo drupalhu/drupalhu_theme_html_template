@@ -15,17 +15,17 @@ Sminkeseknek
 ============================
 
 ## Könyvtárak
-    értelemszerűen elnevezésből sejthető mi megy oda, a HTMLbe megy a HTML proto file jai kivéve az index.html ami kinn van a gyökérben
+* értelemszerűen elnevezésből sejthető mi megy oda, a HTMLbe megy a HTML proto file jai kivéve az index.html ami kinn van a gyökérben
 
 ## JS kód
-    Minden JS kód "use strict"
-    Minden JS a Drupal standardnak megfelelően kellene megírni, jelenlegi ömlesztett kódot refactorolni kellene
-    TODO: Refactor jelenlegi szemetes js kód
+* Minden JS kód "use strict"
+* Minden JS a Drupal standardnak megfelelően kellene megírni, jelenlegi ömlesztett kódot refactorolni kellene
+* TODO: Refactor jelenlegi szemetes js kód
 
 ## SASS style rule
-    Natív sass kiterjesztés (így nem kell linter, mert egyébként nem fordul le a kód)
-    NINCS vendor specifikus kód (Autoprefixer lesz a projekten az fogja lekezelni ezeket)
-    Minden variable megfelelő elnevezéssel kerüljön be (pl a színek $color- előtaggal így a $color gépelése közben már dobja fel a találatot
-    SVG sprite van, icon font és png sprite NINCS (erre majd teszek be grunt jobot)
-    TODO: jelenlegi átemelt stílusfileok szétdobálása logikailag és párhuzamosan javítani
+* Natív sass kiterjesztés (így nem kell linter, mert egyébként nem fordul le a kód)
+* NINCS vendor specifikus kód (Autoprefixer lesz a projekten az fogja lekezelni ezeket)
+* Minden variable megfelelő elnevezéssel kerüljön be (pl a színek $color- előtaggal így a $color gépelése közben már dobja fel a találatot
+* SVG sprite van, icon font és png sprite NINCS (erre majd teszek be grunt jobot)
+* TODO: jelenlegi átemelt stílusfileok szétdobálása logikailag és párhuzamosan javítani
 
