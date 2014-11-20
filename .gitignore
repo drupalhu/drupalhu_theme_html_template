@@ -1,3 +1,13 @@
+# Created by https://www.gitignore.io
+
+### PhpStorm ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+
+*.iml
+
+## Directory-based project format:
+.idea/
+
 .sass-cache
 !lib/bootstrap/css/*.css
 !css/flexslider.css
