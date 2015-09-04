@@ -20,6 +20,13 @@ https://dl.dropboxusercontent.com/u/743951/drupalhu/forrasanyagok/Drupal.hu_web_
 * Ruby (verzió: 2.xxx ), szükséges GEM ek: sass (3.4.8); compass (1.0.1) ; compass-core (1.0.1); compass-import-once (1.0.5)
   -> a mappában a "compass watch paranccsal kezdődik a .sass fileok figyelése
 
+#### Docker
+* A fentieket legegyszerűbben úgy tudod futtatni, ha telepítve van a gépeden a docker és a docker-compose.
+
+```
+docker-compose up
+```
+
 ### Könyvtárak
 * értelemszerűen elnevezésből sejthető mi megy oda, a HTMLbe megy a HTML proto file jai kivéve az index.html ami kinn van a gyökérben
 
